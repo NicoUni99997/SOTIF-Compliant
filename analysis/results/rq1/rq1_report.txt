@@ -1,0 +1,21 @@
+RQ1 - Hazard effectiveness report
+
+Summary (per tool):
+
+           tool  HR_avg_mean  HR_avg_std  HR_avg_median  HR_avg_min  HR_avg_max  R_avg_mean  R_avg_std  R_avg_median  R_avg_min  R_avg_max
+ScenarioFuzzLLM     0.525787    0.081338         0.5714      0.3143      0.5714    0.396065   0.059454        0.4286     0.2329     0.4286
+      SimADFuzz     0.374668    0.096461         0.4286      0.0000      0.4714    0.297165   0.079169        0.3429     0.0000     0.3686
+         TMFuzz     0.421223    0.056171         0.4286      0.1857      0.5571    0.335706   0.043875        0.3429     0.1514     0.4200
+
+
+Kruskal-Wallis (HR_avg): statistic=43.5370, p=3.5161e-10
+Pairwise Mann-Whitney (Bonferroni-corrected p-values) for HR_avg:
+  - ScenarioFuzzLLM vs SimADFuzz: p_corr=5.0540e-08
+  - ScenarioFuzzLLM vs TMFuzz: p_corr=7.0634e-07
+  - SimADFuzz vs TMFuzz: p_corr=3.6507e-02
+
+Kruskal-Wallis (R_avg): statistic=38.2422, p=4.9638e-09
+Pairwise Mann-Whitney (Bonferroni-corrected p-values) for R_avg:
+  - ScenarioFuzzLLM vs SimADFuzz: p_corr=2.9559e-07
+  - ScenarioFuzzLLM vs TMFuzz: p_corr=5.7552e-06
+  - SimADFuzz vs TMFuzz: p_corr=4.5350e-02
